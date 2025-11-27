@@ -12,7 +12,6 @@
         <PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
         <PackageReference Include="Npgsql" Version="9.0.3"/>
         <PackageReference Include="System.Reflection" Version="4.3.0"/>
-        <PackageReference Include="CSharpFunctionalExtensions" Version="3.6.0"/>
     </ItemGroup>
 
     <ItemGroup>
