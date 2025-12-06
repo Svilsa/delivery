@@ -36,6 +36,8 @@ public class StoragePlace : Entity<Guid>
         return new StoragePlace(name, totalVolume);
     }
 
+    // TODO: Переделать на UnitResult<Error>, ибо вся логика метода в том, что не может быть просто Result.Value = false,
+    // без ошибки
     public Result<bool, Error> CanStore(int orderVolume)
     {
         if (orderVolume <= 0)
