@@ -1,4 +1,5 @@
 using DeliveryApp.Api;
+using DeliveryApp.Core.Domain.Services.DispatcherService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +19,10 @@ builder.Services.AddCors(options =>
 // Configuration
 builder.Services.ConfigureOptions<SettingsSetup>();
 var connectionString = builder.Configuration["CONNECTION_STRING"];
+
+// Domain Services
+builder.Services.AddSingleton<IDispatcherService, DispatcherService>();
+
 
 var app = builder.Build();
 
