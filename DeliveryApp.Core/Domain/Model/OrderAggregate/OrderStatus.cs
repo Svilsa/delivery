@@ -4,10 +4,10 @@ namespace DeliveryApp.Core.Domain.Model.OrderAggregate;
 
 public sealed class OrderStatus : ValueObject
 {
-    public static OrderStatus Created = new(nameof(Created));
-    public static OrderStatus Assigned = new(nameof(Assigned));
-    public static OrderStatus Completed = new(nameof(Completed));
-    
+    public static OrderStatus Created => new(nameof(Created).ToLowerInvariant());
+    public static OrderStatus Assigned => new(nameof(Assigned).ToLowerInvariant());
+    public static OrderStatus Completed => new(nameof(Completed).ToLowerInvariant());
+
     private OrderStatus(string name)
     {
         Name = name;
